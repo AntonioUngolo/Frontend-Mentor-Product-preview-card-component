@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --white: #ffffff;
+  --cream: #f2eae2;
+  --gunmetal: #1c232b;
+  --deep-acquamarine: #3d8168;
+  --deep-acquamarine-hover: #1a4032;
+  --aurometal-saurus: #6c7289;
+  --heading: 'Fraunces', serif;
+  --body: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  height: 100vh;
+  background-color: var(--cream);
+  font-family: var(--body);
+  line-height: 23px;
+  color: var(--aurometal-saurus) !important;
+}
+
+.container.cards {
+  width: 600px;
+  height: 450px;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.cards .left {
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 0 0 10px;
+}
+
+.cards .col.right {
+  padding: 32px;
+}
+
+.col.right .overline {
+  letter-spacing: 5px;
+}
+
+.col.right .title {
+  font-family: var(--heading);
+  font-size: 32px;
+  line-height: 1;
+  color: var(--gunmetal);
+}
+
+.col.right .prices .discount {
+  color: var(--deep-acquamarine);
+  font-family: var(--heading);
+  font-size: 32px;
+}
+
+.col.right .prices .full {
+  text-decoration: line-through;
+}
+
+.col.right button {
+  background-color: var(--deep-acquamarine);
+  color: var(--white);
+  padding: 15px 0;
+  gap: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.col.right button:hover {
+  background-color: var(--deep-acquamarine-hover);
+  cursor: pointer;
+}
+
+.col.right button p {
+  font-family: var(--body);
+  font-weight: 700;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .container.cards {
+    height: 600px;
+  }
+
+  .cards .left {
+    background-image: url(images/image-product-mobile.jpg);
+    background-position: top center;
+    border-radius: 10px 10px 0 0;
+    height: 240px;
+  }
+
+  .cards .right {
+    height: 360px;
+  }
+}
